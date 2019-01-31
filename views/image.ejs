@@ -1,0 +1,15 @@
+<% include header %>
+	<form method="post" enctype= "multipart/form-data" action = "/upload">
+		<b>Image:</b>
+		<input type="file" name="upload"><br>
+		<button type="submit" class="btn btn-primary">Upload</button>
+	</form>
+
+	<h1>Images</h1>
+	<% data.forEach(function(value) { %>
+	<div class="col-md-4">
+		<img src="http://localhost:5000/public/images/<%= value.name %>" width ="400">
+		<button class="btn btn-success" id="imageDelete" data-id="<%= value._id%>" data-confirm="Are you sure to delete this Image?"">Delete</button>
+	</div>
+	<% }); %>
+<% include footer %>

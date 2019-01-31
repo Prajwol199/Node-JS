@@ -1,0 +1,27 @@
+<% include header %>
+
+<div class="jumbotron"  style="padding:40px;">
+	<h2>Welcome to my new site using node js</h2>
+	<h4>List of all users</h4>
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Action</th>
+		</tr>
+		<% value = JSON.parse(data) %>
+		<% value.forEach(function(drink) { %>
+		<tr>
+	        <td><%= drink.name %></td>
+	        <td><%= drink.email %></td>
+	        <td>
+		        <a href="/user/update/<%= drink._id %>"><button class="btn btn-success">Edit</button></a>
+		        <button class="btn btn-danger" id="userDelete"  data-route="<%= drink._id%>" data-confirm="Are you sure to delete this User?">Delete</button>
+	    	</td>
+		</tr>
+	    <% }); %>
+	</table>
+	<p><a class="btn btn-primary btn-lg" href="/user/add" role="button">Add User</a></a>
+</div>
+
+<% include footer %>

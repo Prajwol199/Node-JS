@@ -1,0 +1,11 @@
+<% include header %>
+	<h1>Add Product</h1>
+	<form method="post" action="/products/create">
+		Product name:
+		<input type="text" class="form-control" name="name">
+		Price:
+		<input type="number" class="form-control" name="price">
+		<br>
+		<button type="submit" class="btn btn-success">Add </button>
+	</form>
+<% include footer %>

@@ -1,0 +1,27 @@
+<% include header %>
+
+<div class="jumbotron"  style="padding:40px;">
+	<h4>List of all Products</h4>
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Image</th>
+			<th>Action</th>
+		</tr>
+		<% data.forEach(function(value) { %>
+		<tr>
+	        <td><%= value.name %></td>
+	        <td><%= value.price %></td>
+	        <td><%= value.image %></td>
+	        <td>
+		        <a href="/products/<%= value._id%>/update"><button class="btn btn-success">Edit</button></a>
+		        <button class="btn btn-danger" id="productDelete"  data-id="<%= value._id%>" data-confirm="Are you sure to delete this Product?" >Delete</button>
+	    	</td>
+		</tr>
+	    <% }); %>
+	</table>
+	<p><a class="btn btn-primary btn-lg" href="/products/create" role="button">Add Product</a></a>
+</div>
+
+<% include footer %>

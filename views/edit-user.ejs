@@ -1,0 +1,12 @@
+<% include header %>
+	<% value = JSON.parse(data) %>
+	<h1>Edit User</h1>
+	<form method="post" id="updateUser" data-id="<%= value._id%>">
+		User name:
+		<input type="text" class="form-control" name="name" value="<%= value.name %>">
+		email:
+		<input type="email" class="form-control" name="email" value="<%= value.email %>">
+		<br>
+		<button type="submit" class="btn btn-success">Update </button>
+	</form>
+<% include footer %>

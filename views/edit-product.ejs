@@ -1,0 +1,12 @@
+<% include header %>
+	<h1>Edit Product</h1>
+	<% value = JSON.parse(data) %>
+	<form method="post" id="updateProduct" data-id="<%= value._id%>">
+		Product name:
+		<input type="text" class="form-control" name="name" value="<%= value.name %>">
+		Price:
+		<input type="number" class="form-control" name="price" value="<%= value.price%>">
+		<br>
+		<button type="submit" class="btn btn-success">Update </button>
+	</form>
+<% include footer %>

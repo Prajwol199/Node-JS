@@ -1,0 +1,47 @@
+<html>
+<head>
+<title><%= title %></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div style="margin:100px;">
+		<div class="row">
+	        <div class="loginPage col-md-5 col-md-offset-4">
+	            <div class="panel panel-primary">
+	                <div class="panel-heading" align="center">Login to dashboard</div>
+	                <div class="panel-body">
+	                <div class="error " id="error" style="color:red;"></div><br>
+	                    <form  method="post" name="form" action="/login">
+	                        <div class="form-group input-group">
+	                            <span class="input-group-addon" id="sizing-addon2">Email</span>
+	                            <input type="text" name="email" class="form-control" placeholder="Username">
+	                        </div>
+	                        <div class="form-group input-group">
+	                            <span class="input-group-addon" id="sizing-addon2">Password</span>
+	                            <input type="password" name="password" class="form-control" placeholder="Password">
+	                        </div>
+	                        <div class="form-group">
+	                            <input type="checkbox" name="remember" id="rem">
+	                            <label for="rem"> Remember me</label>
+	                        </div>
+
+	                       <a href="<?php echo$server_root?>public/recover_password.php">Forgot password?</a>
+
+	                        <div class="form-group">
+	                            <button class="btn btn-success btn pull-right" name="login">LogIn</button>
+	                        </div>
+	                    </form>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script src="http://localhost:5000/public/js/custom.js"></script>
+</body>
+</html>

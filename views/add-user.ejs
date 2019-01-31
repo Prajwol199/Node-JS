@@ -1,0 +1,13 @@
+<% include header %>
+	<h1>Add User</h1>
+	<form method="post" action="/user/add">
+		User name:
+		<input type="text" class="form-control" name="name">
+		email:
+		<input type="email" class="form-control" name="email">
+		Password:
+		<input type="password" class="form-control" name="password">
+		<br>
+		<button type="submit" class="btn btn-success">Add </button>
+	</form>
+<% include footer %>
